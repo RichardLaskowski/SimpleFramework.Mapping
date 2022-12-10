@@ -101,7 +101,6 @@ public class Mapper
 			default            : throw new NotImplementedException();
 		};
 	}
-
 	private void MapSByteProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, sbyte>)!(destination, (getter as Func<TSource, sbyte>)!(source));
 	private void MapByteProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, byte>)!(destination, (getter as Func<TSource, byte>)!(source));
 	private void MapShortProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, short>)!(destination, (getter as Func<TSource, short>)!(source));
@@ -295,7 +294,6 @@ public class Mapper
 		propertyNameDictionary.Add(property.Name, delegateDictionary);
 		return propertyNameDictionary;
 	}
-
 	private Dictionary<string, Dictionary<Methods, Delegate>> CacheGuidAccessors<TClass>(PropertyInfo property)
 	{
 		Dictionary<string, Dictionary<Methods, Delegate>> propertyNameDictionary = new Dictionary<string, Dictionary<Methods, Delegate>>();
@@ -307,6 +305,7 @@ public class Mapper
 	}
 
 	#endregion
+		
 	#region Cache Getters
 
 	private Func<TClass, TProperty> CacheGetter<TClass, TProperty>(PropertyInfo property) => (Func<TClass, TProperty>)Delegate.CreateDelegate(typeof(Func<TClass, TProperty>), property.GetGetMethod()!);
@@ -328,6 +327,7 @@ public class Mapper
 	private Func<TClass, Guid> CacheGuidGetter<TClass>(PropertyInfo property)             => CacheGetter<TClass, Guid>(property);
 
 	#endregion
+		
 	#region Cache Setters
 
 	private Action<TClass, TProperty> CacheSetter<TClass, TProperty>(PropertyInfo property) => (Action<TClass, TProperty>)Delegate.CreateDelegate(typeof(Action<TClass, TProperty>), property.GetSetMethod()!);
