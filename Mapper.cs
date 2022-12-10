@@ -102,22 +102,22 @@ public class Mapper
 		};
 	}
 
-	private void MapSByteProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, sbyte>)!(destination, (getter as Func<TSource, sbyte>)!(source));
-	private void MapByteProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)				=> (setter as Action<TDestination, byte>)!(destination, (getter as Func<TSource, byte>)!(source));
-	private void MapShortProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, short>)!(destination, (getter as Func<TSource, short>)!(source));
+	private void MapSByteProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, sbyte>)!(destination, (getter as Func<TSource, sbyte>)!(source));
+	private void MapByteProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, byte>)!(destination, (getter as Func<TSource, byte>)!(source));
+	private void MapShortProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, short>)!(destination, (getter as Func<TSource, short>)!(source));
 	private void MapUnsignedShortProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)	=> (setter as Action<TDestination, ushort>)!(destination, (getter as Func<TSource, ushort>)!(source));
-	private void MapIntegerProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, int>)!(destination, (getter as Func<TSource, int>)!(source));
+	private void MapIntegerProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, int>)!(destination, (getter as Func<TSource, int>)!(source));
 	private void MapUnsignedIntegerProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)	=> (setter as Action<TDestination, uint>)!(destination, (getter as Func<TSource, uint>)!(source));
-	private void MapLongProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)				=> (setter as Action<TDestination, long>)!(destination, (getter as Func<TSource, long>)!(source));
+	private void MapLongProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, long>)!(destination, (getter as Func<TSource, long>)!(source));
 	private void MapUnsignedLongProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, ulong>)!(destination, (getter as Func<TSource, ulong>)!(source));
 	private void MapCharacterProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, char>)!(destination, (getter as Func<TSource, char>)!(source));
-	private void MapFloatProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, float>)!(destination, (getter as Func<TSource, float>)!(source));
-	private void MapDoubleProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, double>)!(destination, (getter as Func<TSource, double>)!(source));
-	private void MapDecimalProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, decimal>)!(destination, (getter as Func<TSource, decimal>)!(source));
-	private void MapBooleanProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, bool>)!(destination, (getter as Func<TSource, bool>)!(source));
-	private void MapStringProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, string>)!(destination, (getter as Func<TSource, string>)!(source));
-	private void MapDateTimeProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, DateTime>)!(destination, (getter as Func<TSource, DateTime>)!(source));
-	private void MapGuidProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)				=> (setter as Action<TDestination, Guid>)!(destination, (getter as Func<TSource, Guid>)!(source));
+	private void MapFloatProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, float>)!(destination, (getter as Func<TSource, float>)!(source));
+	private void MapDoubleProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, double>)!(destination, (getter as Func<TSource, double>)!(source));
+	private void MapDecimalProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, decimal>)!(destination, (getter as Func<TSource, decimal>)!(source));
+	private void MapBooleanProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, bool>)!(destination, (getter as Func<TSource, bool>)!(source));
+	private void MapStringProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, string>)!(destination, (getter as Func<TSource, string>)!(source));
+	private void MapDateTimeProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)		=> (setter as Action<TDestination, DateTime>)!(destination, (getter as Func<TSource, DateTime>)!(source));
+	private void MapGuidProperty<TSource, TDestination>(Delegate getter, Delegate setter, TSource source, TDestination destination)			=> (setter as Action<TDestination, Guid>)!(destination, (getter as Func<TSource, Guid>)!(source));
 
 	#endregion
 
